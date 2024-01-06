@@ -19,3 +19,4 @@ samples, guidance on mobile development, and a full API reference.
 # Notes for the final readme version
 
 Used [uuid](https://pub.dev/packages/uuid) to create unique id's.
+Used enums for dummy data
