@@ -20,3 +20,4 @@ samples, guidance on mobile development, and a full API reference.
 
 Used [uuid](https://pub.dev/packages/uuid) to create unique id's.
 Used enums for dummy data
+Used [intl](https://pub.dev/packages/intl) to format dates
