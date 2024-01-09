@@ -26,3 +26,5 @@ Used Icons
 Used themedata for Material3
 Used Modal bottom sheets
 Caught and saved user input
+Learned about controller
+Used Lifecycle Methods
