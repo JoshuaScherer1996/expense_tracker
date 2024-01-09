@@ -50,6 +50,10 @@ class _NewExpenseState extends State<NewExpense> {
                 },
                 child: const Text('save expense'),
               ),
+              ElevatedButton(
+                onPressed: () {},
+                child: const Text('Cancel'),
+              ),
             ],
           ),
         ],
