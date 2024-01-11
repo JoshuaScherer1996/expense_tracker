@@ -41,3 +41,4 @@ Used global theme variables for styling the app
 Used similar to copyWith the styleFrom method
 Learned about inconsistency within flutter such as copyWith and styleFrom
 Styled buttons, colors and texts
+Used Theme.of to access themedata
