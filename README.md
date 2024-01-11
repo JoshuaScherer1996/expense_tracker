@@ -45,3 +45,6 @@ Used Theme.of to access themedata
 Implemented darkmode and learned about setting the thememode
 Used the for in loop
 Learned about alternatice constructor functions
+Learned about FractionalySizedBox
+Used for in on widgets
+Used code from a [github repo](https://github.com/academind/flutter-complete-guide-course-resources/tree/main/Lecture%20Attachments/05%20Interactivity%20%26%20Theming/chart) to adjust it for my own project
