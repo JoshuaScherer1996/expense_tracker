@@ -36,3 +36,5 @@ Input validation with tryParse and Error outputs with AlertDialog
 Used Dismissible Widgets and got an introduction to keys
 Used ScaffoldMessenger and Snackbar to display messages when deleting items and being able to restore them
 Used copyWith on ThemeData to keep some basic styles given by flutter while overriding the values i needed to change
+Learned about sub widget themes like the ElevatedButtonThemeData
+Used global theme variables for styling the app
