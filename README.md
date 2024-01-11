@@ -33,3 +33,4 @@ Learned about and used Futures
 Used async functions
 Implemented drop down menu
 Input validation with tryParse and Error outputs with AlertDialog
+Used Dismissible Widgets and got an introduction to keys
