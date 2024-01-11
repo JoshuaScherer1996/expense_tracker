@@ -43,3 +43,4 @@ Learned about inconsistency within flutter such as copyWith and styleFrom
 Styled buttons, colors and texts
 Used Theme.of to access themedata
 Implemented darkmode and learned about setting the thememode
+Used the for in loop
