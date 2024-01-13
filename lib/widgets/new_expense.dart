@@ -171,18 +171,18 @@ class _NewExpenseState extends State<NewExpense> {
                 },
               ),
               const Spacer(),
+              TextButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                child: const Text('Cancel'),
+              ),
               // Button to submit the new expense data.
               ElevatedButton(
                 onPressed: _submitExpenseData,
                 child: const Text('save expense'),
               ),
               // Button to cancel and close the modal.
-              ElevatedButton(
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-                child: const Text('Cancel'),
-              ),
             ],
           ),
         ],
