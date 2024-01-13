@@ -54,3 +54,6 @@ Expense Tracker is a Flutter app that helps you keep track of all your expenses 
 - Learned about FractionalySizedBox
 - Used for in on widgets
 - Used code from a [github repo](https://github.com/academind/flutter-complete-guide-course-resources/tree/main/Lecture%20Attachments/05%20Interactivity%20%26%20Theming/chart) to adjust it for my own project
+----------------
+- Learned about Displaying a screen dependend on the available width (diaplaying based on orientation).
+- Learned about Widget size preferences and parent size constraints.
