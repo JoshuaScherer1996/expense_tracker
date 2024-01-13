@@ -77,6 +77,9 @@ class _ExpensesState extends State<Expenses> {
 
   @override
   Widget build(BuildContext context) {
+    // Saving the width every time the build method is executed.
+    final width = MediaQuery.of(context).size.width;
+
     // Default content when there are no expenses.
     Widget mainContent = const Center(
       child: Text('No expenss found. Start adding some!'),
@@ -102,16 +105,30 @@ class _ExpensesState extends State<Expenses> {
           ),
         ],
       ),
-      body: Column(
-        children: [
-          // Displaying the chart of expenses.
-          Chart(expenses: _registeredExpenses),
-          // The main content displaying either a message or the list of expenses.
-          Expanded(
-            child: mainContent,
-          )
-        ],
-      ),
+      // Rendering content dependend on the width (orientation).
+      body: width < 600
+          ? Column(
+              children: [
+                // Displaying the chart of expenses.
+                Chart(expenses: _registeredExpenses),
+                // The main content displaying either a message or the list of expenses.
+                Expanded(
+                  child: mainContent,
+                )
+              ],
+            )
+          : Row(
+              children: [
+                // Displaying the chart of expenses.
+                Expanded(
+                  child: Chart(expenses: _registeredExpenses),
+                ),
+                // The main content displaying either a message or the list of expenses.
+                Expanded(
+                  child: mainContent,
+                )
+              ],
+            ),
     );
   }
 }
