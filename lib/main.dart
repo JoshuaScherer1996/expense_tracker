@@ -1,18 +1,23 @@
+// Importing necessary Flutter material package and local widgets.
 import 'package:flutter/material.dart';
 import 'package:expense_tracker/widgets/expenses.dart';
 
+// Defining the light color scheme for the application.
 var kColorScheme = ColorScheme.fromSeed(
   seedColor: const Color.fromARGB(255, 96, 59, 181),
 );
 
+// Defining the dark color scheme for the application.
 var kDarkColorScheme = ColorScheme.fromSeed(
   brightness: Brightness.dark,
   seedColor: const Color.fromARGB(255, 5, 99, 125),
 );
 
+// Main entry point of the application.
 void main() {
   runApp(
     MaterialApp(
+      // Setting up the dark theme data with specific color schemes and styles.
       darkTheme: ThemeData.dark().copyWith(
         useMaterial3: true,
         colorScheme: kDarkColorScheme,
@@ -30,6 +35,7 @@ void main() {
           ),
         ),
       ),
+      // Setting up the light theme data with specific color schemes and styles.
       theme: ThemeData().copyWith(
         useMaterial3: true,
         colorScheme: kColorScheme,
@@ -49,6 +55,7 @@ void main() {
             backgroundColor: kColorScheme.primaryContainer,
           ),
         ),
+        // Customizing the text theme, particularly the titleLarge style.
         textTheme: ThemeData().textTheme.copyWith(
               titleLarge: TextStyle(
                 fontWeight: FontWeight.bold,
@@ -58,7 +65,9 @@ void main() {
             ),
       ),
       // themeMode: ThemeMode.system, // this line is the default
+      // Setting the root widget of the application.
       home: const Expenses(),
+      // Disabling the debug banner in the upper right corner.
       debugShowCheckedModeBanner: false,
     ),
   );

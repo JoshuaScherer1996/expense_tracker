@@ -1,9 +1,13 @@
+// Importing necessary Flutter material package and local models.
 import 'package:flutter/material.dart';
 import 'package:expense_tracker/models/expense.dart';
 
+// A StatefulWidget to handle the creation of a new expense.
 class NewExpense extends StatefulWidget {
+  // Constructor with required onAddExpense callback parameter.
   const NewExpense({super.key, required this.onAddExpense});
 
+  // Callback function to add an Expense.
   final void Function(Expense expense) onAddExpense;
 
   @override
@@ -12,12 +16,16 @@ class NewExpense extends StatefulWidget {
   }
 }
 
+// Private State class for the NewExpense StatefulWidget.
 class _NewExpenseState extends State<NewExpense> {
+  // Text editing controllers for title and amount input fields.
   final _titleController = TextEditingController();
   final _amountController = TextEditingController();
+  // Variables to hold the selected date and category.
   DateTime? _selectedDate;
   Category _selectedCategory = Category.leisure;
 
+  // Function to show a date picker dialog.
   void _presentDatePicker() async {
     final now = DateTime.now();
     final firstDate = DateTime(now.year - 1, now.month, now.day);
@@ -32,13 +40,16 @@ class _NewExpenseState extends State<NewExpense> {
     });
   }
 
+  // Function to submit the entered expense data.
   void _submitExpenseData() {
     // tryParse('Hello') -> null, tryParse('1.12') -> 1.12
+    // Parsing the entered amount and validating the input data.
     final enteredAmount = double.tryParse(_amountController.text);
     final amountIsInvalid = enteredAmount == null || enteredAmount <= 0;
     if (_titleController.text.trim().isEmpty ||
         amountIsInvalid ||
         _selectedDate == null) {
+      // Showing a dialog if the input is invalid.
       showDialog(
         context: context,
         builder: (ctx) => AlertDialog(
@@ -57,6 +68,7 @@ class _NewExpenseState extends State<NewExpense> {
       );
       return;
     }
+    // Adding the new expense.
     widget.onAddExpense(
       Expense(
         title: _titleController.text,
@@ -65,11 +77,13 @@ class _NewExpenseState extends State<NewExpense> {
         category: _selectedCategory,
       ),
     );
+    // Closing the modal after submission.
     Navigator.pop(context);
   }
 
   @override
   void dispose() {
+    // Disposing controllers when the widget is removed from the widget tree.
     _titleController.dispose();
     _amountController.dispose();
     super.dispose();
@@ -77,6 +91,7 @@ class _NewExpenseState extends State<NewExpense> {
 
   @override
   Widget build(BuildContext context) {
+    // Building the UI for the new expense form.
     return Padding(
       padding: const EdgeInsets.fromLTRB(
         16,
@@ -86,6 +101,7 @@ class _NewExpenseState extends State<NewExpense> {
       ),
       child: Column(
         children: [
+          // Text field for the expense title.
           TextField(
             controller: _titleController,
             maxLength: 50,
@@ -95,6 +111,7 @@ class _NewExpenseState extends State<NewExpense> {
           ),
           Row(
             children: [
+              // Text field for the expense amount.
               Expanded(
                 child: TextField(
                   keyboardType: TextInputType.number,
@@ -106,6 +123,7 @@ class _NewExpenseState extends State<NewExpense> {
                 ),
               ),
               const SizedBox(width: 16),
+              // Container for the date picker and selected date display.
               Expanded(
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.end,
@@ -130,6 +148,7 @@ class _NewExpenseState extends State<NewExpense> {
           ),
           Row(
             children: [
+              // Dropdown for selecting the expense category.
               DropdownButton(
                 value: _selectedCategory,
                 items: Category.values
@@ -152,10 +171,12 @@ class _NewExpenseState extends State<NewExpense> {
                 },
               ),
               const Spacer(),
+              // Button to submit the new expense data.
               ElevatedButton(
                 onPressed: _submitExpenseData,
                 child: const Text('save expense'),
               ),
+              // Button to cancel and close the modal.
               ElevatedButton(
                 onPressed: () {
                   Navigator.pop(context);
@@ -169,4 +190,3 @@ class _NewExpenseState extends State<NewExpense> {
     );
   }
 }
-//ToDo: Add textfield to Column in sperate Row
