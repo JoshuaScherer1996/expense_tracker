@@ -42,7 +42,7 @@ class _NewExpenseState extends State<NewExpense> {
     });
   }
 
-  // Fiúnction to show a dialog if the input is invalid. Adapted for iOS and Android.
+  // Fiunction to show a dialog if the input is invalid. Adapted for iOS and Android.
   void _showDialog() {
     if (Platform.isIOS) {
       showCupertinoDialog(
