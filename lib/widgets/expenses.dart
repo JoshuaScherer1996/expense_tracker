@@ -37,6 +37,7 @@ class _ExpensesState extends State<Expenses> {
   // Function to open the bottom sheet for adding a new expense.
   void _openAddExpenseOverlay() {
     showModalBottomSheet(
+      useSafeArea: true,
       isScrollControlled: true,
       context: context,
       builder: (ctx) => NewExpense(onAddExpense: _addExpense),
