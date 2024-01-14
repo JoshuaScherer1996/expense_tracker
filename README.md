@@ -9,7 +9,7 @@ Expense Tracker is a Flutter app that helps you keep track of all your expenses 
 - Adding new expenses with the title, amount, type and date
 
 ### Example walkthrough android
-<div align="center">
+<div align="center" style="transform: rotate(90deg);">
   <img src="walkthrough_adaptiv_android.gif" alt="Dark mode walkthrough" width="400"/>
 </div>
 
