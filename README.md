@@ -57,3 +57,4 @@ Expense Tracker is a Flutter app that helps you keep track of all your expenses 
 ----------------
 - Learned about Displaying a screen dependend on the available width (diaplaying based on orientation).
 - Learned about Widget size preferences and parent size constraints.
+- From MediaQuery used viewInsets.bottom to safe the height and adjust the overlapping space of the soft keyboard.
