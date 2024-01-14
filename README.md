@@ -59,3 +59,10 @@ Expense Tracker is a Flutter app that helps you keep track of all your expenses 
 - Learned about Widget size preferences and parent size constraints.
 - From MediaQuery used viewInsets.bottom to safe the height and adjust the overlapping space of the soft keyboard.
 - Used safearea to not overlap device features with the modal sheet.
+- Displayed elements depending on the max with the LayoutBuilder.
+- Learned about making the app adaptive with the cupertino dialogue.
+- Use of Cupertino for iOS specific designs.
+
+
+# Note 
+The code within the new_expense.dart file could be improved. For example the widgets that are reused should be put into seperate files for better readability. However I kept it here the way it is to better demonstrate the act of conditional rendering via copy pasting.
