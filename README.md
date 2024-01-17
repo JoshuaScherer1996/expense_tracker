@@ -21,7 +21,7 @@ Expense Tracker is a Flutter app that helps you keep track of all your expenses 
   <img src="screenshot_iphone.png" alt="Screenshot iPhone" width="200"/>
 </div>
 <div align="center">
-  <img src="screenshot_iphone_popup.png" alt="iPhone pop up with cupertino" width="400"/>
+  <img src="screenshot_iphone_popup.png" alt="iPhone pop up with cupertino" width="200"/>
 </div>
 
 ### Example walkthrough android
